@@ -1,5 +1,6 @@
 import React from 'react'
 import ProfileImg from '../assets/profile.jpg'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -10,8 +11,17 @@ const Hero = () => {
             <p className="mt-4 text-gray-600 max-w-md">
                 A frontend developer passionate about building fast, responsive, and accessible websites using modern technologies
             </p>
+            <button className="mt-6 px-6 py-3 bg-blue-600 text-white mr-8 rounded-lg hover:red-700 transition">
+                <Link to="/projects">View My Projects</Link>
+            </button>
             <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:red-700 transition">
-                View Projects
+                <a
+                href="/DHS_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                📄 View Resume
+                </a>
             </button>
         </div>
         
