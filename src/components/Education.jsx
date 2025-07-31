@@ -6,7 +6,7 @@ const Education = () => {
       level: "Bachelor of Technology (B.Tech)",
       institution: "PES University Bengaluru",
       duration: "2021 – 2025",
-      description: "Major in Computer Science. Participated in extra-curricular activities and completed multiple academic projects.",
+      description: "Major in Computer Science and Engineering. Participated in extra-curricular activities, member of various college clubs and completed multiple academic projects.",
     },
     {
       level: "Higher Secondary Education (12th Grade)",

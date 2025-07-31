@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 const projects = [
   {
     title: 'Techify: Electronics Management System',
-    tech: 'HTML, CSS, AngularJS, Spring Boot, SQL',
+    tech: 'HTML, CSS, Javascript, AngularJS, Spring Boot, SQL',
     duration: 'Feb 2025 – Mar 2025',
     bullets: [
       'Improved frontend responsiveness by 40% using AngularJS.',
