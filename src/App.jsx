@@ -15,7 +15,7 @@ const App = () => {
     <div className="min-h-screen bg-gray-100">
       <Navbar />
       <Routes>
-        <Route path='/' element={<Hero />}/>
+        <Route path='/MyPortfolio' element={<Hero />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/skills' element={<Skills />}/>
         <Route path='/contact' element={<Contact />}/>
