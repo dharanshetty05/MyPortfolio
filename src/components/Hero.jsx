@@ -9,7 +9,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Hi! I am Dharan Shetty</h1>
             <p className="mt-4 text-lg font-bold md:text-xl text-gray-600">Frontend Developer | Creative Coder</p>
             <p className="mt-4 text-gray-600 max-w-md">
-                A frontend developer passionate about building fast, responsive, and accessible websites using modern technologies
+                A fullstack developer passionate about building fast, responsive, and accessible websites using modern technologies.
             </p>
             <button className="mt-6 px-6 py-3 bg-blue-600 text-white mr-8 rounded-lg hover:red-700 transition">
                 <Link to="/projects">View My Projects</Link>
