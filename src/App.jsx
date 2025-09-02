@@ -12,19 +12,19 @@ import Experience from './components/Experience';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-white">
       <Navbar />
-      <Routes>
-        <Route path='/MyPortfolio' element={<Hero />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/skills' element={<Skills />}/>
-        <Route path='/contact' element={<Contact />}/>
-        <Route path='/projects' element={<Projects />}/>
-        <Route path='/education' element={<Education />}/>
-        <Route path='/experience' element={<Experience />}/>
-      </Routes>
-      {/* <Hero /> */}
-      
+      <div className="pt-16"> {/* Add padding-top to account for fixed navbar */}
+        <Routes>
+          <Route path='/MyPortfolio' element={<Hero />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/skills' element={<Skills />}/>
+          <Route path='/contact' element={<Contact />}/>
+          <Route path='/projects' element={<Projects />}/>
+          <Route path='/education' element={<Education />}/>
+          <Route path='/experience' element={<Experience />}/>
+        </Routes>
+      </div>
     </div>
   )
 }

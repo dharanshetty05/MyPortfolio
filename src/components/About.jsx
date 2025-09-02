@@ -1,93 +1,120 @@
 import React from 'react'
 import ProfilePic from '../assets/techie.jpg'
+import { FaCode, FaFilm, FaLightbulb, FaRocket } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <section className='min-h-screen py-16 px-4 bg-gray-100' id='about'>
-      <div className='max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-10'>
-        <div className='flex-1 font-georgia'>
-          <h2 className='text-4xl font-bold text-gray-800 mb-6'>About Me</h2>
-          <p className='text-gray-700 text-md leading-relaxed'>
-            I'm <span className='font-semibold'>Dharan Shetty</span>, a B.Tech graduate and passionate software developer with hands-on experience in building full-stack web applications. My technical strengths lie in <span className='font-semibold'>React, JavaScript, C++, HTML, and Angular</span>. I love crafting intuitive UIs and solving real-world problems through code.
-          </p>
-          <p className='text-gray-700 text-md mt-4 leading-relaxed'>
-            I interned at <span className='font-semibold'>KPMG’s Generative AI COE team</span>, where I worked on frontend development using modern frameworks like React and Angular, and backend APIs with Spring Boot. I contributed to internal tools like <span className='italic'>ProManager</span> and <span className='italic'>ProScreener</span>, focusing on performance and usability.
-          </p>
-          <p className='text-gray-700 text-md mt-4 leading-relaxed'>
-            Beyond software, I led <span className='font-semibold'>Agasthya Productions</span>, a creative space where I directed and edited short films. This blend of tech and storytelling helps me approach problems with both logic and creativity.
-          </p>
-          <p className='text-gray-700 text-md mt-4 leading-relaxed'>
-            I'm currently exploring roles in software development where I can apply my frontend expertise, continue learning, and contribute to impactful products.
+    <section className='min-h-screen py-20 px-4 bg-gradient-to-br from-neutral-50 to-white' id='about'>
+      <div className='max-w-7xl mx-auto'>
+        {/* Header */}
+        <div className="text-center mb-16 animate-slide-down">
+          <h2 className="text-5xl font-display font-bold text-neutral-800 mb-4">
+            About Me
+          </h2>
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            A passionate developer who bridges the gap between technology and creativity
           </p>
         </div>
 
-        <div className='flex-1 flex justify-center'>
-          <img 
-            src={ProfilePic} 
-            alt="Dharan Shetty" 
-            className='rounded-full shadow-xl ring-4 ring-blue-200 w-96 h-96 object-cover transition-transform duration-500 hover:scale-105'/>
+        <div className='grid lg:grid-cols-2 gap-16 items-center'>
+          {/* Content */}
+          <div className='space-y-8 animate-slide-up'>
+            <div className="space-y-6">
+              <p className='text-lg text-neutral-700 leading-relaxed'>
+                I'm <span className='font-semibold text-primary-600'>Dharan Shetty</span>, a B.Tech graduate and passionate software developer with hands-on experience in building full-stack web applications. My technical strengths lie in <span className='font-semibold text-primary-600'>React, JavaScript, C++, HTML, and Angular</span>. I love crafting intuitive UIs and solving real-world problems through code.
+              </p>
+              
+              <p className='text-lg text-neutral-700 leading-relaxed'>
+                I interned at <span className='font-semibold text-primary-600'>KPMG's Generative AI COE team</span>, where I worked on frontend development using modern frameworks like React and Angular, and backend APIs with Spring Boot. I contributed to internal tools like <span className='italic text-accent-600'>ProManager</span> and <span className='italic text-accent-600'>ProScreener</span>, focusing on performance and usability.
+              </p>
+              
+              <p className='text-lg text-neutral-700 leading-relaxed'>
+                Beyond software, I led <span className='font-semibold text-primary-600'>Agasthya Productions</span>, a creative space where I directed and edited short films. This blend of tech and storytelling helps me approach problems with both logic and creativity.
+              </p>
+              
+              <p className='text-lg text-neutral-700 leading-relaxed'>
+                I'm currently exploring roles in software development where I can apply my frontend expertise, continue learning, and contribute to impactful products.
+              </p>
+            </div>
+
+            {/* Key Highlights */}
+            <div className="grid sm:grid-cols-2 gap-6 pt-8">
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white">
+                  <FaCode size={20} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-neutral-800">Full-Stack Developer</h4>
+                  <p className="text-sm text-neutral-600">React, Angular, Spring Boot</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+                  <FaFilm size={20} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-neutral-800">Creative Director</h4>
+                  <p className="text-sm text-neutral-600">Film Production & Editing</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white">
+                  <FaLightbulb size={20} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-neutral-800">Problem Solver</h4>
+                  <p className="text-sm text-neutral-600">Innovative Solutions</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center text-white">
+                  <FaRocket size={20} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-neutral-800">Fast Learner</h4>
+                  <p className="text-sm text-neutral-600">Adaptable & Curious</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Profile Image */}
+          <div className='flex justify-center lg:justify-end animate-scale-in'>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full blur-2xl opacity-30 animate-glow"></div>
+              <img 
+                src={ProfilePic} 
+                alt="Dharan Shetty" 
+                className='relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl ring-4 ring-white/50 transition-transform duration-500 hover:scale-105'
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🎬</div>
+                  <p className="text-sm font-semibold text-neutral-800">Creative</p>
+                  <p className="text-xs text-neutral-600">Filmmaker</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className='mt-20 text-center animate-fade-in'>
+          <div className="inline-block p-8 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
+            <p className="text-2xl lg:text-3xl font-display font-semibold text-neutral-800 mb-4">
+              "Code is my logic, film is my language."
+            </p>
+            <p className="text-lg text-neutral-600 italic">
+              — Dharan Shetty
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className='mt-12 text-center text-gray-600 italic text-xl'>
-        "Code is my logic, film is my language."
-    </div>
-
     </section>
   )
 }
 
 export default About
-
-
-// import React from 'react'
-// import ProfilePic from '../assets/techie.jpg'
-
-// const About = () => {
-//   return (
-//     <section className='min-h-screen py-16 px-4 bg-gray-100' id='about'>
-//         <div className='max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-10 mb-12'>
-//             <div className='flex-1'>
-//                 <h2 className='text-4xl font-bold text-gray-800 mb-6'>About Me</h2>
-//                 <p className='text-gray-700 text-lg leading-relaxed'>
-//                     Hello! I'm <span className='font-semibold'>Dharan Shetty</span>, a passionate software developer with a love for building web applications using modern technologies like React, JavaScript, and Python. I recently completed my B.Tech and interned at KPMG’s Generative AI COE team, working on exciting real-world projects.
-//                 </p>
-//                 <p className='text-gray-700 text-lg mt-4 leading-relaxed'>
-//                     When I'm not coding, I run a film production house called <span className='font-semibold'>Agasthya Productions</span>, where I direct and edit short films. I'm currently looking for full-time roles where I can apply my frontend skills and grow as a developer.
-//                 </p>
-//             </div>
-//             <div className='flex-1 flex justify-center'>
-//                 <img 
-//                     src={ProfilePic} 
-//                     alt="Dharan Shetty" 
-//                     className='rounded-full shadow-xl ring-4 ring-blue-200 w-48 h-48 object-cover transition-transform duration-500 hover:scale-105'/>
-//             </div>
-//         </div>
-//         <div className='max-w-4xl mx-auto bg-white shadow-md rounded-xl p-6 mb-10'>
-//             <h3 className="text-2xl font-semibold text-gray-800 mb-4 ">Skills</h3>
-//             <ul className="flex flex-wrap gap-3">
-//                 <li className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">React</li>
-//                 <li className="bg-green-100 text-green-800 px-4 py-2 rounded-full">C++</li>
-//                 <li className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">Python</li>
-//                 <li className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Angular</li>
-//                 <li className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full">Javascript</li>
-//             </ul>
-//         </div>
-//         <div className="max-w-4xl mx-auto bg-white shadow-md rounded-xl p-6 mb-10">
-//             <h3 className='text-2xl font-semibold text-gray-800 mb-4'>Experience</h3>
-//             <ul className="list-disc list-inside text-gray-700 space-y-2">
-//             <li>Consulting Intern at KPMG (Jan–Jun 2025) – Generative AI Team</li>
-//             <li>Founded and leaded Agasthya Productions and directed various short films and ad films</li>
-//             <li>Built various projects revolving around Web Development</li>
-//             </ul>
-//         </div>
-//         <div className='max-w-4xl mx-auto text-center mt-10'>
-//             <a href="/Dharan_Shetty_Resume.pdf" download className="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded-full shadow hover:bg-blue-700  transition">
-//               Download Resume
-//             </a>
-//         </div>
-//     </section>
-// )
-// }
-
-// export default About
