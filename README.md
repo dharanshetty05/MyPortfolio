@@ -49,11 +49,6 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 - **Color System**: Semantic color palette with gradients
 - **Responsive Grid**: CSS Grid and Flexbox layouts
 
-### **Development Tools**
-- **Vite**: Fast build tool and development server
-- **PostCSS**: CSS processing
-- **ESLint**: Code linting (if configured)
-
 ## 🎨 **Design System**
 
 ### **Color Palette**
@@ -161,91 +156,6 @@ The built files will be in the `dist/` directory.
 - **Timeline Layout**: Alternating timeline for education/experience
 - **Enhanced Animations**: More complex hover states
 
-## 🎭 **Animations & Interactions**
-
-### **Custom Animations**
-```css
-fade-in: 0.6s ease-in-out
-slide-up: 0.8s ease-out
-slide-down: 0.8s ease-out
-scale-in: 0.5s ease-out
-float: 3s ease-in-out infinite
-glow: 2s ease-in-out infinite alternate
-```
-
-### **Hover Effects**
-- **Card Lift**: `transform hover:-translate-y-2`
-- **Shadow Enhancement**: `hover:shadow-2xl`
-- **Scale Effects**: `group-hover:scale-110`
-- **Color Transitions**: Smooth color changes
-
-### **Performance**
-- **Hardware Acceleration**: Transform-based animations
-- **Smooth Transitions**: 500ms duration
-- **Staggered Loading**: Progressive reveals
-
-## 🎨 **Component Details**
-
-### **Navbar**
-- **Glassmorphism**: Transparent background with blur
-- **Scroll Detection**: Changes appearance on scroll
-- **Mobile Menu**: Hamburger menu with smooth animations
-- **Active States**: Visual indicators for current page
-
-### **Hero Section**
-- **Background Elements**: Floating gradient orbs
-- **Gradient Text**: Eye-catching typography
-- **CTA Buttons**: Prominent call-to-action
-- **Social Links**: Circular icon buttons
-
-### **Projects**
-- **Card Layout**: Modern card design with hover effects
-- **Technology Tags**: Color-coded tech stacks
-- **GitHub Links**: Direct links to source code
-- **Category Labels**: Project type indicators
-
-### **Skills**
-- **Interactive Tabs**: Filterable skill categories
-- **Proficiency Bars**: Visual skill levels
-- **Icon Design**: Gradient backgrounds for icons
-- **Hover Effects**: Scale and color transitions
-
-### **Education & Experience**
-- **Timeline Design**: Alternating left/right layout
-- **Color Coding**: Different colors for different types
-- **Achievement Tags**: Key highlights as pills
-- **Responsive Timeline**: Stacks on mobile
-
-### **Contact**
-- **Two-Column Layout**: Contact info and social links
-- **Contact Cards**: Individual cards for each method
-- **Social Media**: Large, interactive cards
-- **CTA Button**: Prominent email button
-
-## 🔧 **Customization**
-
-### **Colors**
-Edit `tailwind.config.js` to modify the color palette:
-```javascript
-colors: {
-  primary: { /* blue gradient */ },
-  accent: { /* purple gradient */ },
-  neutral: { /* gray scale */ }
-}
-```
-
-### **Content**
-Update component data arrays to modify content:
-- **Projects**: Edit `projects` array in `Projects.jsx`
-- **Skills**: Modify `skills` object in `Skills.jsx`
-- **Education**: Update `educationData` in `Education.jsx`
-- **Experience**: Change `workData` in `Experience.jsx`
-
-### **Styling**
-- **Typography**: Modify font families in Tailwind config
-- **Spacing**: Adjust padding and margins
-- **Animations**: Customize animation durations and effects
-
 ## 📊 **Performance**
 
 ### **Optimizations**
@@ -259,31 +169,6 @@ Update component data arrays to modify content:
 - **Accessibility**: ARIA labels and focus states
 - **SEO**: Meta tags and structured data
 - **Mobile-First**: Progressive enhancement
-
-## 🚀 **Deployment**
-
-### **Netlify**
-1. Connect GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-
-### **Vercel**
-1. Import GitHub repository
-2. Framework preset: Vite
-3. Build command: `npm run build`
-
-### **GitHub Pages**
-1. Add `gh-pages` package
-2. Update `package.json` scripts
-3. Deploy with `npm run deploy`
-
-## 🤝 **Contributing**
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## 📄 **License**
 
