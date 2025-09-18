@@ -1,4 +1,4 @@
-# Dharan Shetty - Portfolio Website
+# My Portfolio Website
 
 A modern, responsive portfolio website built with React and Tailwind CSS, showcasing my skills, projects, and professional experience.
 

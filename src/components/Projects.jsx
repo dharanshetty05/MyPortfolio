@@ -3,6 +3,18 @@ import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode } from 'react-icons/
 
 const projects = [
   {
+  title: 'CrackIt: Placement Prep Website',
+  tech: 'MongoDB, Express, React, Node.js, Tailwind CSS',
+  duration: 'Sep 2025 – Present',
+  bullets: [
+    'Developed a MERN-based platform to help students prepare for placements.',
+    'Implemented backend with Express & MongoDB and built responsive frontend using React + Tailwind CSS.',
+    'Currently integrating features like quizzes, coding problems, and progress tracking.'
+  ],
+  github: 'https://github.com/dharanshetty05/crackit-frontend.git',
+  category: 'Full-Stack'
+  },
+  {
     title: 'Techify: Electronics Management System',
     tech: 'HTML, CSS, Javascript, AngularJS, Spring Boot, SQL',
     duration: 'Feb 2025 – Mar 2025',
@@ -23,6 +35,20 @@ const projects = [
     ],
     github: 'https://github.com/dharanshetty05/LeetMetric.git',
     category: 'Frontend'
+  },
+  {
+  title: 'TweetGen',
+  tech: 'Python, Django, SQLite, Bootstrap',
+  duration: 'July 2025',
+  bullets: [
+    'Built a Django-based web app for creating, managing, and sharing tweets.',
+    'Implemented user authentication with registration, login, logout, and secure password handling.',
+    'Added tweet CRUD operations with support for photo uploads.',
+    'Developed a responsive UI using Django templates and Bootstrap.',
+    'Used SQLite for development (extensible to PostgreSQL/MySQL in production).'
+  ],
+  github: 'https://github.com/dharanshetty05/TweetGen_Django.git',
+  category: 'Full-Stack'
   },
   {
     title: 'Enhanced Biometric Authentication System',
