@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 
 ## 🚀 **Live Demo**
 
-[View Portfolio](https://dharanshetty05.github.io/MyPortfolio)
+[View Portfolio](https://dharan-shetty.vercel.app/)
 
 ## ✨ **Features**
 
