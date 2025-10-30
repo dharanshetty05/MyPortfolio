@@ -22,13 +22,13 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { path: '/MyPortfolio/', label: 'Home' },
-    { path: '/MyPortfolio/about', label: 'About' },
-    { path: '/MyPortfolio/projects', label: 'Projects' },
-    { path: '/MyPortfolio/skills', label: 'Skills' },
-    { path: '/MyPortfolio/education', label: 'Education' },
-    { path: '/MyPortfolio/experience', label: 'Experience' },
-    { path: '/MyPortfolio/contact', label: 'Contact' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/skills', label: 'Skills' },
+    { path: '/education', label: 'Education' },
+    { path: '/experience', label: 'Experience' },
+    { path: '/contact', label: 'Contact' },
   ]
 
   return (

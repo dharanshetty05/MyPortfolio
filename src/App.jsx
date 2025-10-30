@@ -17,12 +17,12 @@ const App = () => {
       <div className="pt-16"> {/* Add padding-top to account for fixed navbar */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/MyPortfolio/about" element={<About />} />
-          <Route path="/MyPortfolio/projects" element={<Projects />} />
-          <Route path="/MyPortfolio/skills" element={<Skills />} />
-          <Route path="/MyPortfolio/experience" element={<Experience />} />
-          <Route path="/MyPortfolio/education" element={<Education />} />
-          <Route path="/MyPortfolio/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </div>
