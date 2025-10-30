@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt, FaAward } from 'react-icons/fa';
 
 const Education = () => {
@@ -33,14 +34,20 @@ const Education = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-neutral-50 to-white">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true, amount: 0.18 }}
+      className="py-20 px-4 bg-gradient-to-br from-neutral-50 to-white dark:from-gray-900 dark:to-neutral-950"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-slide-down">
-          <h2 className="text-5xl font-display font-bold text-neutral-800 mb-4">
+          <h2 className="text-5xl font-display font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
             Education Journey
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
             My academic path that shaped my foundation in technology and problem-solving
           </p>
         </div>
@@ -70,10 +77,10 @@ const Education = () => {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors duration-300">
+                        <h3 className="text-xl md:text-2xl font-semibold text-neutral-800 dark:text-white mb-2 transition-colors duration-300">
                           {edu.level}
                         </h3>
-                        <div className="flex items-center text-primary-600 font-medium mb-2">
+                        <div className="flex items-center text-primary-600 dark:text-gray-300 font-medium mb-2 transition-colors duration-300">
                           <FaMapMarkerAlt className="mr-2 text-sm" />
                           {edu.institution}
                         </div>
@@ -134,7 +141,7 @@ const Education = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

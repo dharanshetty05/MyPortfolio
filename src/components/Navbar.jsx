@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaSun, FaMoon } from 'react-icons/fa'
+import { ThemeContext } from '../ThemeContext';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+
+  // Consume theme from context
+  const { isDark, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,13 +22,13 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { path: '/MyPortfolio', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/education', label: 'Education' },
-    { path: '/experience', label: 'Experience' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/MyPortfolio/', label: 'Home' },
+    { path: '/MyPortfolio/about', label: 'About' },
+    { path: '/MyPortfolio/projects', label: 'Projects' },
+    { path: '/MyPortfolio/skills', label: 'Skills' },
+    { path: '/MyPortfolio/education', label: 'Education' },
+    { path: '/MyPortfolio/experience', label: 'Experience' },
+    { path: '/MyPortfolio/contact', label: 'Contact' },
   ]
 
   return (
@@ -38,7 +44,7 @@ const Navbar = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
               DS
             </div>
-            <span className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent transition-colors duration-300">
               Dharan Shetty
             </span>
           </Link>
@@ -49,27 +55,50 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group ${
-                  location.pathname === item.path
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-neutral-600 hover:text-primary-600 hover:bg-neutral-50'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transition-colors duration-300 relative group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300
+                  ${location.pathname === item.path
+                    ? 'text-primary-600 dark:text-accent-400 bg-primary-50 dark:bg-neutral-900'
+                    : 'text-neutral-600 dark:text-gray-100 hover:text-primary-600 dark:hover:text-[var(--color-accent)] hover:bg-neutral-50 dark:hover:bg-neutral-950 hover:scale-105'}
+                `}
               >
                 {item.label}
-                <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-full group-hover:left-0 ${
-                  location.pathname === item.path ? 'w-full left-0' : ''
-                }`}></span>
+                <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-full group-hover:left-0 ${location.pathname === item.path ? 'w-full left-0' : ''}`}></span>
               </Link>
             ))}
+            <button
+              className="ml-4 flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#161b22] hover:bg-gray-100 dark:hover:bg-[#222] shadow transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-primary-400"
+              onClick={toggleTheme}
+              aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            >
+              <span className="transition-transform duration-300 group-active:rotate-180">
+                {isDark ? (
+                  <FaSun className="text-yellow-400" />
+                ) : (
+                  <FaMoon className="text-blue-400" />
+                )}
+              </span>
+              <span className="transition-all duration-300 text-sm font-semibold dark:text-gray-100">
+                {isDark ? 'Light Mode' : 'Dark Mode'}
+              </span>
+            </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-neutral-600 hover:text-primary-600 hover:bg-neutral-50 transition-colors duration-200"
-          >
-            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
+          {/* Mobile menu button & theme toggle */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <button
+              className="p-2 rounded-full bg-neutral-100 hover:bg-primary-200 hover:shadow transition-all duration-300"
+              onClick={toggleTheme}
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? <FaMoon className="text-primary-600" /> : <FaSun className="text-yellow-400" />}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 rounded-lg text-neutral-600 hover:text-primary-600 hover:bg-neutral-50 transition-colors duration-200"
+            >
+              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -84,10 +113,10 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 transition-colors duration-300 ${
                   location.pathname === item.path
                     ? 'text-primary-600 bg-primary-50 border-l-4 border-primary-500'
-                    : 'text-neutral-600 hover:text-primary-600 hover:bg-neutral-50'
+                    : 'text-neutral-600 dark:text-gray-100 hover:text-primary-600 dark:hover:text-[var(--color-accent)] hover:bg-neutral-50'
                 }`}
               >
                 {item.label}

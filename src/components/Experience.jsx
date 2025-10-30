@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaBuilding, FaRocket, FaFilm, FaCode } from 'react-icons/fa';
 
 const Experience = () => {
@@ -25,7 +26,7 @@ const Experience = () => {
       title: "Founder & Director",
       company: "Agasthya Productions",
       location: "Bengaluru, Karnataka",
-      duration: "March 2023 – Present",
+      duration: "March 2023 – August 2025",
       type: "Entrepreneurship",
       icon: <FaFilm />,
       color: "purple",
@@ -59,14 +60,20 @@ const Experience = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true, amount: 0.24 }}
+      className="py-20 px-4 bg-white dark:bg-neutral-950"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-slide-down">
-          <h2 className="text-5xl font-display font-bold text-neutral-800 mb-4">
+          <h2 className="text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
             Professional Experience
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             My journey through technology consulting and creative entrepreneurship
           </p>
         </div>
@@ -100,16 +107,16 @@ const Experience = () => {
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors duration-300">
+                          <h3 className="text-xl md:text-2xl font-semibold text-neutral-800 dark:text-white mb-2 group-hover:text-primary-600 transition-colors duration-300">
                             {work.title}
                           </h3>
-                          <div className="flex items-center text-primary-600 font-medium mb-2">
+                          <div className="flex items-center text-primary-600 dark:text-gray-300 font-medium mb-2 transition-colors duration-300">
                             <FaBuilding className="mr-2 text-sm" />
                             {work.company}
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className={`inline-flex items-center px-3 py-1 ${colors.light} ${colors.text} rounded-full text-sm font-medium`}>
+                          <div className={`inline-flex items-center px-3 py-1 ${colors.light} ${colors.text} rounded-full text-sm font-medium transition-colors duration-300`}>
                             <FaRocket className="mr-1" />
                             {work.type}
                           </div>
@@ -117,10 +124,10 @@ const Experience = () => {
                       </div>
 
                       {/* Duration & Location */}
-                      <div className="flex items-center text-sm text-neutral-500 mb-4">
+                      <div className="flex items-center text-sm text-neutral-500 dark:text-gray-300 mb-4 transition-colors duration-300">
                         <FaCalendarAlt className="mr-2" />
                         {work.duration}
-                        <span className="mx-2">•</span>
+                        <span className="mx-2 text-xs font-medium text-neutral-500 dark:text-gray-300 transition-colors duration-300">•</span>
                         <FaMapMarkerAlt className="mr-2" />
                         {work.location}
                       </div>
@@ -149,7 +156,7 @@ const Experience = () => {
                           {work.technologies.map((tech, i) => (
                             <span 
                               key={i}
-                              className={`px-3 py-1 ${colors.light} ${colors.text} text-xs font-medium rounded-full`}
+                              className={`px-3 py-1 ${colors.light} ${colors.text} text-xs font-medium rounded-full transition-colors duration-300`}
                             >
                               {tech}
                             </span>
@@ -166,7 +173,7 @@ const Experience = () => {
                           {work.achievements.map((achievement, i) => (
                             <span 
                               key={i}
-                              className="px-3 py-1 bg-neutral-100 text-neutral-700 text-xs font-medium rounded-full"
+                              className="px-3 py-1 bg-neutral-100 text-neutral-700 text-xs font-medium rounded-full transition-colors duration-300"
                             >
                               {achievement}
                             </span>
@@ -186,13 +193,13 @@ const Experience = () => {
 
         {/* Footer Note */}
         <div className="text-center mt-16 animate-fade-in">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent-50 to-primary-50 text-neutral-700 rounded-xl border border-accent-100">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent-50 to-primary-50 text-neutral-700 rounded-xl border border-accent-100 transition-colors duration-300">
             <FaBriefcase className="mr-2 text-accent-600" />
             <span className="font-medium">Ready for new challenges and opportunities</span>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
