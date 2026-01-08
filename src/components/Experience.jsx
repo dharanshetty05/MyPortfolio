@@ -21,23 +21,6 @@ const Experience = () => {
       ],
       technologies: ["React", "AngularJS", "Spring Boot", "Python", "MySQL", "HTML/CSS", "JavaScript"],
       achievements: ["Frontend Development", "AI Tools", "Enterprise Applications", "Performance Optimization"]
-    },
-    {
-      title: "Founder & Director",
-      company: "Agasthya Productions",
-      location: "Bengaluru, Karnataka",
-      duration: "March 2023 – August 2025",
-      type: "Entrepreneurship",
-      icon: <FaFilm />,
-      color: "purple",
-      responsibilities: [
-        "Founded an independent film and content studio focused on regional storytelling.",
-        "Directed & produced short films and award-winning ad films.",
-        "Managed scriptwriting, cinematography, editing, sound design, original music and marketing.",
-        "Led a small creative team handling social media and marketing.",
-      ],
-      technologies: ["Adobe Premiere Pro", "Canva", "Film Production", "Creative Direction", "Team Leadership"],
-      achievements: ["Film Direction", "Content Creation", "Team Management", "Creative Leadership"]
     }
   ];
 

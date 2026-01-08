@@ -1,17 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { FaSun, FaMoon } from 'react-icons/fa'
-import { ThemeContext } from '../ThemeContext';
-
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const location = useLocation()
-
-  // Consume theme from context
-  const { isDark, toggleTheme } = useContext(ThemeContext);
+  const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,24 +15,61 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id)
+    if (!el) return
+
+    const navbarOffset = 80
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset
+    const offsetPosition = elementPosition - navbarOffset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
+  }
+
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/education', label: 'Education' },
-    { path: '/experience', label: 'Experience' },
-    { path: '/contact', label: 'Contact' },
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'background', label: 'Background' },
+    { id: 'contact', label: 'Contact' },
   ]
 
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        rootMargin: '-40% 0px -50% 0px',
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-neutral-200/50' 
-        : 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-neutral-100/50'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-[#0b0d12]/80 backdrop-blur-md'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
@@ -50,77 +81,64 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transition-colors duration-300 relative group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300
-                  ${location.pathname === item.path
-                    ? 'text-primary-600 dark:text-accent-400 bg-primary-50 dark:bg-neutral-900'
-                    : 'text-neutral-600 dark:text-gray-100 hover:text-primary-600 dark:hover:text-[var(--color-accent)] hover:bg-neutral-50 dark:hover:bg-neutral-950 hover:scale-105'}
-                `}
-              >
-                {item.label}
-                <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-full group-hover:left-0 ${location.pathname === item.path ? 'w-full left-0' : ''}`}></span>
-              </Link>
-            ))}
-            <button
-              className="ml-4 flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#161b22] hover:bg-gray-100 dark:hover:bg-[#222] shadow transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-primary-400"
-              onClick={toggleTheme}
-              aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            >
-              <span className="transition-transform duration-300 group-active:rotate-180">
-                {isDark ? (
-                  <FaSun className="text-yellow-400" />
-                ) : (
-                  <FaMoon className="text-blue-400" />
-                )}
-              </span>
-              <span className="transition-all duration-300 text-sm font-semibold dark:text-gray-100">
-                {isDark ? 'Light Mode' : 'Dark Mode'}
-              </span>
-            </button>
-          </div>
-
-          {/* Mobile menu button & theme toggle */}
-          <div className="flex items-center space-x-2 md:hidden">
-            <button
-              className="p-2 rounded-full bg-neutral-100 hover:bg-primary-200 hover:shadow transition-all duration-300"
-              onClick={toggleTheme}
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? <FaMoon className="text-primary-600" /> : <FaSun className="text-yellow-400" />}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg text-neutral-600 hover:text-primary-600 hover:bg-neutral-50 transition-colors duration-200"
-            >
-              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen 
-            ? 'max-h-96 opacity-100 visible' 
-            : 'max-h-0 opacity-0 invisible'
-        }`}>
-          <div className="py-4 space-y-2 border-t border-neutral-200/50">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 transition-colors duration-300 ${
-                  location.pathname === item.path
-                    ? 'text-primary-600 bg-primary-50 border-l-4 border-primary-500'
-                    : 'text-neutral-600 dark:text-gray-100 hover:text-primary-600 dark:hover:text-[var(--color-accent)] hover:bg-neutral-50'
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`relative text-sm transition ${
+                  activeSection === item.id
+                    ? 'text-white'
+                    : 'text-[#9aa0b3] hover:text-[#e6e8ee]'
                 }`}
               >
                 {item.label}
-              </Link>
+
+                {/* underline */}
+                <span
+                  className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ${
+                    activeSection === item.id
+                      ? 'w-full opacity-100'
+                      : 'w-0 opacity-0'
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-[#e6e8ee]"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+          </button>
+
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="pt-4 pb-6 flex flex-col gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  scrollToSection(item.id)
+                  setIsOpen(false)
+                }}
+                className={`text-left text-sm transition ${
+                  activeSection === item.id
+                    ? 'text-white'
+                    : 'text-[#9aa0b3] hover:text-[#e6e8ee]'
+                }`}
+              >
+                {item.label}
+              </button>
             ))}
           </div>
         </div>

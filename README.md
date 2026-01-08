@@ -31,8 +31,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 - **About**: Personal story and key highlights
 - **Projects**: Showcase of technical projects with GitHub links
 - **Skills**: Interactive skills with proficiency levels
-- **Education**: Timeline-based education history
-- **Experience**: Professional experience with technology stacks
+- **Background**: Timeline-based education history and professional experience with technology stacks
 - **Contact**: Multiple ways to get in touch
 
 ## 🛠 **Tech Stack**
@@ -82,14 +81,11 @@ react-tailwind-portfolio/
 │   ├── components/
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
-│   │   ├── Education.jsx
-│   │   ├── Experience.jsx
+│   │   ├── Background.jsx
 │   │   ├── Hero.jsx
 │   │   ├── Navbar.jsx
 │   │   ├── Projects.jsx
 │   │   └── Skills.jsx
-│   ├── pages/
-│   │   └── Home.jsx
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
@@ -110,7 +106,7 @@ react-tailwind-portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/dharanshetty05/react-tailwind-portfolio.git
+   git clone https://github.com/dharanshetty05/MyPortfolio.git
    cd react-tailwind-portfolio
    ```
 
