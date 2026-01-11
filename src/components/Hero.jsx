@@ -87,6 +87,12 @@ const Hero = () => {
               </span>
             </h1>
 
+            <p className="sr-only">
+              Dharan Shetty is a web developer specializing in React, JavaScript, and modern frontend development.
+              This is the official portfolio of Dharan Shetty, showcasing projects, skills, and experience in building
+              clean, responsive, and high-performance web applications.
+            </p>
+
 
             <h2 className="text-2xl lg:text-3xl font-normal text-[#c7cad6] leading-snug">
               I build{' '}
