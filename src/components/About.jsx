@@ -92,7 +92,7 @@ const About = () => {
               variants={itemUp}
               className="text-xl lg:text-2xl font-medium text-[#e6e8ee] leading-snug mt-10 mb-10"
             >
-              I build clean, scalable products with a strong focus on usability and performance.
+              I build scalable full-stack applications with a focus on performance, clean architecture, and AI-powered workflows.
             </motion.p>
 
             <div className="grid gap-8 text-[16.5px] leading-[1.7] text-[#c7cad6]">
@@ -101,7 +101,7 @@ const About = () => {
                 software developer building modern, scalable web applications across
                 the frontend and backend using{' '}
                 <span className="text-[#a78bfa] font-medium">
-                  React, JavaScript, Node.js, Next.js, MySQL, and Spring Boot
+                  React, Next.js, Node.js, PostgreSQL, MongoDB, and modern AI integrations
                 </span>.
               </motion.p>
 
@@ -110,17 +110,18 @@ const About = () => {
                 <span className="text-[#7c6cff] font-medium">
                   KPMG’s Generative AI COE
                 </span>
-                , I worked on internal platforms by building frontend features and
-                integrating backend APIs used in production systems.
+                , I contributed to internal platforms by building frontend features, 
+                integrating backend APIs, and improving application performance for production systems.
               </motion.p>
 
               <motion.p variants={itemUp}>
-                I care deeply about{' '}
+                I enjoy building systems{' '}
                 <span className="text-[#a78bfa] font-medium">
-                  UI design and product thinking
+                  that balance clean user experiences with scalable backend architecture
                 </span>
-                , believing good software should be clear, intentional,
-                and easy to reason about.
+                , focusing on maintainability, performance, and practical problem-solving.
+
+                  
               </motion.p>
             </div>
           </motion.div>
@@ -133,7 +134,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="text-sm uppercase tracking-widest text-[#9aa0b3] mb-8">
-              What I bring to the table
+              Core Strengths
             </p>
 
             <div className="grid gap-6">
@@ -151,12 +152,12 @@ const About = () => {
                 {
                   icon: <FaLightbulb />,
                   title: 'Problem Solving',
-                  desc: 'Breaking complexity into practical, maintainable solutions.'
+                  desc: 'Designing practical, maintainable solutions for real-world engineering problems.'
                 },
                 {
                   icon: <FaRocket />,
-                  title: 'Growth Mindset',
-                  desc: 'Continuously learning, iterating, and improving with each project.'
+                  title: 'AI & Automation',
+                  desc: 'Building AI-integrated workflows and <p></p>ractical automation systems using modern LLM tooling.'
                 }
               ].map((item, idx) => (
                 <motion.div

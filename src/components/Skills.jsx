@@ -21,6 +21,8 @@ import {
   SiAdobe,
   SiOpenai,
   SiGoogle,
+  SiPrisma,
+  SiSocketdotio,
   SiFramer,
   SiVercel,
   SiPostman,
@@ -38,7 +40,7 @@ const coreSkills = [
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38BDF8" },
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "Express", icon: SiExpress, color: "#ffffff" },
+  { name: "Express.js", icon: SiExpress, color: "#ffffff" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1" },
@@ -53,13 +55,14 @@ const skills = [
   { name: "Redis", icon: SiRedis, color: "#DC382D" },
   { name: "Python", icon: SiPython, color: "#3776AB" },
   { name: "C++", icon: SiCplusplus, color: "#00599C" },
-  { name: "Adobe Premiere Pro", icon: SiAdobe, color: "#9999FF" },
-  { name: "ChatGPT", icon: SiOpenai, color: "#10A37F" },
-  { name: "Google Gemini", icon: SiGoogle, color: "#4285F4" },
+  { name: "REST APIs", icon: SiPostman, color: "#FF6C37" },
+  { name: "JWT Auth", icon: SiNodedotjs, color: "#339933" },
+  { name: "Prisma", icon: SiPrisma, color: "#ffffff" },
+  { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
+  { name: "REST APIs", icon: SiPostman, color: "#FF6C37" },
   { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
   { name: "Vercel", icon: SiVercel, color: "#ffffff" },
   { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-  { name: "npm", icon: SiNpm, color: "#CB3837" }
 ];
 
 const rowA = [...skills, ...skills];
@@ -101,12 +104,12 @@ const Skills = () => {
             viewport={{ once: true }}
             className="text-3xl lg:text-4xl font-semibold tracking-tight inline-flex items-center gap-3"
           >
-            <span className="text-[#e6e8ee]">My</span>
+            <span className="text-[#e6e8ee]">Skills</span>
             <span className="
               bg-gradient-to-br from-primary-500 to-accent-500
               bg-clip-text text-transparent
             ">
-              Tech Stack
+              & Technologies
             </span>
           </motion.h2>
 

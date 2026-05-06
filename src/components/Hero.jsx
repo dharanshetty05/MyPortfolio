@@ -88,9 +88,8 @@ const Hero = () => {
             </h1>
 
             <p className="sr-only">
-              Dharan Shetty is a web developer specializing in React, JavaScript, and modern frontend development.
-              This is the official portfolio of Dharan Shetty, showcasing projects, skills, and experience in building
-              clean, responsive, and high-performance web applications.
+              Dharan Shetty is a Full Stack Developer specializing in AI-powered web applications,
+              scalable backend systems, React, Next.js, Node.js, and modern web engineering.
             </p>
 
 
@@ -99,9 +98,9 @@ const Hero = () => {
               <span className="text-[#a78bfa]">
                 fast, scalable
               </span>{' '}
-              web products that{' '}
+              AI-powered web{' '}
               <span className="text-[#7c6cff]">
-                convert
+                applications
               </span>
             </h2>
           </div>
@@ -109,6 +108,10 @@ const Hero = () => {
           <p className="hidden md:flex text-lg lg:text-xl text-[#c7cad6] max-w-2xl">
             Full-stack developer focused on performance, clean architecture,
             and user experiences that actually move metrics.
+          </p>
+
+          <p className="text-sm text-[#9aa0b3]">
+            Former GenAI COE Intern at KPMG
           </p>
 
           {/* CTAs */}
@@ -125,7 +128,7 @@ const Hero = () => {
                 transition-all
               "
             >
-              See What I’ve Built
+              View Projects
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
 

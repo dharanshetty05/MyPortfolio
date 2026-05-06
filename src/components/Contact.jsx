@@ -56,7 +56,11 @@ const Contact = () => {
           <div className="mx-auto mt-4 h-[2px] w-24 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full" />
 
           <p className="mt-6 text-neutral-400 max-w-xl mx-auto">
-            Have an idea or opportunity in mind? Let’s talk.
+            Open to full-stack, AI-focused, and software engineering opportunities.
+          </p>
+
+          <p className="mt-2 text-sm text-neutral-500">
+            Currently seeking full-stack developer and backend-focused engineering roles.
           </p>
         </motion.div>
 
@@ -77,7 +81,7 @@ const Contact = () => {
                 Let’s Connect
               </h3>
               <p className="text-neutral-400 text-sm">
-                Reach out through any of these channels. I usually reply within a day.
+                Feel free to reach out for opportunities, collaborations, or technical discussions.
               </p>
             </div>
 
@@ -103,7 +107,7 @@ const Contact = () => {
             {/* Socials */}
             <div className="pt-4 space-y-3">
               <p className="text-xs uppercase tracking-wide text-neutral-500">
-                Follow Me
+                Profiles
               </p>
 
               <div className="flex gap-4">
@@ -199,7 +203,7 @@ const Contact = () => {
               <textarea
                 name="message"
                 rows="4"
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about the opportunity or project..."
                 className="
                   w-full rounded-xl bg-black/40
                   border border-white/10

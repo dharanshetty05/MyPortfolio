@@ -11,43 +11,43 @@ const projects = [
   {
     title: "TaskFlow",
     description:
-      "A full-stack collaborative task manager that lets teams create, assign, track tasks in real time with secure authentication and live updates.",
-    tech: ["Next.js", "Typescript", "PostgreSQL", "NodeJS"],
+      "A real-time collaborative task manager with secure authentication, live updates, and scalable backend architecture for concurrent team workflows.",
+    tech: ["Next.js", "Typescript", "PostgreSQL", "Node.js"],
     image: "/projects/taskflow.png",
     visit: "https://collaborative-task-manager-one-pied.vercel.app/",
     github: "https://github.com/dharanshetty05/collaborative-task-manager.git",
   },
   {
+    title: "LeadCraftAI",
+    description:
+      "An AI-powered lead intelligence platform that analyzes Instagram business profiles and generates personalized cold outreach using LLM-driven workflows.",
+    tech: ["Next.js", "Node.js", "MongoDB", "Groq API"],
+    image: "/projects/leadcraft.png",
+    visit: "https://github.com/dharanshetty05/LeadCraftAI",
+    github: "https://github.com/dharanshetty05/LeadCraftAI",
+  },
+  {
+    title: "AdSync AI",
+    description:
+      "An AI-driven landing page personalization engine that aligns website messaging with ad intent using structured LLM pipelines and real-time previews.",
+    tech: ["Next.js", "Groq API", "Axios", "Cheerio"],
+    image: "/projects/adsync.png",
+    visit: "https://adsyncai.vercel.app/",
+    github: "https://github.com/dharanshetty05/adsync-ai",
+  },
+  {
     title: "Palmstone Anjuna Retreat",
     description:
-      "A premium homestay website designed to showcase ambience, location, and stay experience with a calm, conversion-focused layout.",
+      "A responsive hospitality website focused on performance, modern UI design, and seamless user experience across devices.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     image: "/projects/palmstone.png",
     visit: "http://palmstone-anjuna.vercel.app/",
     github: "https://github.com/dharanshetty05/palmstone-anjuna-retreat.git",
   },
   {
-    title: "The BrewStory Cafe",
-    description:
-      "A cafe website focused on storytelling, menu discovery, and local brand presence with a warm, approachable visual tone.",
-    tech: ["UX Design", "Next.js", "JavaScript"],
-    image: "/projects/brewstory.png",
-    visit: "https://brewstory-cafe.vercel.app/",
-    github: "https://github.com/dharanshetty05/BrewStoryCafe-Website.git",
-  },
-  {
-    title: "The Spice Table",
-    description:
-      "A restaurant showcase site focused on authentic Indian cuisine, menu discovery, and an inviting dine-in experience presented with clean visual hierarchy.",
-    tech: ["UX Design", "Next.js", "Tailwind CSS"],
-    image: "/projects/spicetable.png",
-    visit: "https://spice-table-website.vercel.app/",
-    github: "https://github.com/dharanshetty05/Spice-Table-Website.git",
-  },
-  {
     title: "Personal Portfolio",
     description:
-      "A curated, minimal portfolio site designed to showcase my work, process, and professional presence with intentional hierarchy and refined motion.",
+      "A modern developer portfolio built with React and Framer Motion to showcase projects, technical skills, and engineering experience.",
     tech: ["ReactJS", "Tailwind CSS", "Brand Identity"],
     image: "/projects/portfolio.png",
     visit: "https://dharan-shetty.vercel.app/",
@@ -56,7 +56,7 @@ const projects = [
   {
     title: "FitCoach",
     description:
-      "A fitness coaching platform with personalized workout plans, clean UI, and structured progression to help users stay motivated and consistent.",
+      "A fitness coaching platform featuring structured workout plans, responsive UI, and scalable frontend architecture.",
     tech: ["Next.js", "Tailwind CSS", "Lucide React"],
     image: "/projects/fitcoach.png",
     visit: "https://fitcoach-sable.vercel.app/",

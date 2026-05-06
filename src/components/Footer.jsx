@@ -15,8 +15,7 @@ const Footer = () => {
               Dharan Shetty
             </h3>
             <p className="mt-2 max-w-sm text-sm leading-relaxed">
-              Designing and building modern, high-performance web experiences
-              with clarity, intent, and motion.
+              Full-stack developer building scalable web applications, backend systems, and AI-powered products.
             </p>
           </div>
 
@@ -86,7 +85,7 @@ const Footer = () => {
           </span>
 
           <span className="text-neutral-500">
-            Built with React, Tailwind & Framer Motion
+            Built with React, Tailwind CSS, and Framer Motion
           </span>
         </div>
       </div>

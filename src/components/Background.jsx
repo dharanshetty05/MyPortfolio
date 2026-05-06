@@ -32,12 +32,12 @@ const Background = () => {
             viewport={{ once: true }}
             className="text-3xl lg:text-4xl font-semibold tracking-tight inline-flex items-center gap-3"
           >
-            <span className="text-[#e6e8ee]">Professional</span>
+            <span className="text-[#e6e8ee]">Experience</span>
             <span className="
               bg-gradient-to-br from-primary-500 to-accent-500
               bg-clip-text text-transparent
             ">
-              Background
+              & Education
             </span>
           </motion.h2>
 
@@ -80,7 +80,7 @@ const Background = () => {
                 className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur px-8 py-10"
               >
                 <h3 className="text-2xl text-white font-medium">
-                  Consulting Intern – GenAI COE
+                  GenAI COE Intern
                 </h3>
 
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-400">
@@ -104,16 +104,16 @@ const Background = () => {
 
                 <ul className="mt-8 space-y-4 text-neutral-300 leading-relaxed max-w-xl">
                   <li>
-                    Built and refined frontends for internal GenAI tools used by
-                    consulting teams across live engagements.
+                    Built and optimized frontend features for internal 
+                    GenAI platforms used in enterprise consulting workflows.
                   </li>
                   <li>
-                    Improved dashboard responsiveness and UI performance within
-                    Angular-based enterprise systems.
+                    Improved frontend responsiveness and application performance 
+                    within Angular-based enterprise systems.
                   </li>
                   <li>
-                    Collaborated across React, Spring Boot, Python, and MySQL in
-                    a production consulting environment.
+                    Worked with frontend and backend teams to integrate APIs, 
+                    resolve system issues, and deliver production-ready features in Agile workflows.
                   </li>
                 </ul>
               </motion.div>
@@ -140,17 +140,12 @@ const Background = () => {
                   title: "B.Tech in Computer Science",
                   meta: "PES University · 2021 – 2025",
                   note:
-                    "Focused on core computer science, systems, and applied software development."
+                    "Focused on full-stack development, system design fundamentals, and scalable software engineering."
                 },
                 {
                   title: "Higher Secondary (PCMC)",
                   meta: "Alvas PU College · 2019 – 2021",
-                  note: "Scored 99%. Strong grounding in mathematics and science."
-                },
-                {
-                  title: "Secondary School",
-                  meta: "Little Rock Indian School · 2007 – 2019",
-                  note: "Completed schooling with a strong academic foundation."
+                  note: "KCET Rank: 1220 • Scored 99%"
                 }
               ].map((edu, i) => (
                 <motion.div

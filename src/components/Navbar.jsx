@@ -34,7 +34,7 @@ const Navbar = () => {
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'background', label: 'Background' },
+    { id: 'background', label: 'Experience' },
     { id: 'contact', label: 'Contact' },
   ]
 
@@ -104,6 +104,20 @@ const Navbar = () => {
                 />
               </button>
             ))}
+            <a
+              href="/DHS_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                px-4 py-2 rounded-lg
+                border border-primary-500/30
+                text-sm text-white
+                hover:border-primary-500
+                transition
+              "
+            >
+              Resume
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
