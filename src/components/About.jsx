@@ -157,7 +157,7 @@ const About = () => {
                 {
                   icon: <FaRocket />,
                   title: 'AI & Automation',
-                  desc: 'Building AI-integrated workflows and <p></p>ractical automation systems using modern LLM tooling.'
+                  desc: 'Building AI-integrated workflows and practical automation systems using modern LLM tooling.'
                 }
               ].map((item, idx) => (
                 <motion.div
