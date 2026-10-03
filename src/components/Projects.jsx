@@ -18,15 +18,6 @@ const projects = [
     github: "https://github.com/dharanshetty05/collaborative-task-manager.git",
   },
   {
-    title: "LeadCraftAI",
-    description:
-      "An AI-powered lead intelligence platform that analyzes Instagram business profiles and generates personalized cold outreach using LLM-driven workflows.",
-    tech: ["Next.js", "Node.js", "MongoDB", "Groq API"],
-    image: "/projects/leadcraft.png",
-    visit: "https://github.com/dharanshetty05/LeadCraftAI",
-    github: "https://github.com/dharanshetty05/LeadCraftAI",
-  },
-  {
     title: "AdSync AI",
     description:
       "An AI-driven landing page personalization engine that aligns website messaging with ad intent using structured LLM pipelines and real-time previews.",
